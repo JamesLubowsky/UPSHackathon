@@ -1,2 +1,0 @@
-# UPSHackathon
-UPS Hackathon Project
