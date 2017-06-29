@@ -1,0 +1,32 @@
+    ::before 
+    <div class="container">
+        ::before
+         <h2>Top Heroes</h2>
+        <div class = "container" *ngIf="topOn">
+            <ul>
+                <div class = "left">
+                <li *ngFor = "let hero of heroes; let i = index ">
+                    <button class="hero-items" (click)="setIndex(i)" *ngIf= "(i<3)">
+                        {{hero.name}}
+                    </button>
+
+                </li>
+                </div>
+            </ul>
+            <div class="right" *ngIf="display">
+                <h2>Hero ID: {{heroes[ind].id}}</h2>
+                <p> Champion: {{heroes[ind].name}} <p>
+            </div>
+        </div>
+        
+        <div class = "container" *ngIf="dashOn">
+            <ul>
+                <li *ngFor = "let hero of heroes">
+                    id: {{hero.id}} 
+                    hero: {{hero.name}}
+                </li>
+            </ul>
+        </div>
+        <button (click) ="top()">Top Heroes</button> <button (click) = "dash()">Dashboard</button>
+       
+     </div>
